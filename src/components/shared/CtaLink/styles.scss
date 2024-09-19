@@ -1,0 +1,20 @@
+@import "~styles/theme.scss";
+
+.cta-link {
+    width: max-content;
+    height: min-content;
+    padding: $spacing-xs $spacing-md;
+    border: $border-size solid $color-brand;
+    border-radius: $border-radius-primary;
+    background-color: $color-brand;
+    color: $color-primary;
+    font: $font-md;
+    text-decoration: none;
+    transition: all $time ease-in-out;
+
+    &:hover {
+        background-color: $color-dark-glass;
+        backdrop-filter: blur($blur);
+        color: $color-brand;
+    }
+}

@@ -1,0 +1,48 @@
+@import "~styles/theme.scss";
+@import "~styles/utils.scss";
+
+.text {
+    width: 100%;
+    height: min-content;
+    color: $color-primary;
+    font: $font-md;
+    text-align: center;
+
+    &-- {
+        &color- {
+            @each $i in $theme-color {
+                &#{$i} {
+                    color: get-theme-color($i);
+                }
+            }
+        }
+
+        &font- {
+            @each $i in $theme-font {
+                &#{$i} {
+                    font: get-theme-font($i);
+                }
+            }
+        }
+
+        &text-align- {
+            @each $i in $text-align {
+                &#{$i} {
+                    text-align: $i;
+                }
+            }
+        }
+
+        &change-text-align-on-screen- {
+            @each $i in $theme-breakpoint {
+                @each $j in $text-align {
+                    @media (width >= get-theme-breakpoint($i)) {
+                        &#{$i}-#{$j} {
+                            text-align: $j;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

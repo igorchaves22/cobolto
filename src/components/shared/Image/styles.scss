@@ -1,0 +1,49 @@
+@import "~styles/theme.scss";
+@import "~styles/utils.scss";
+
+.image {
+    width: min(100%, 10rem);
+    height: min-content;
+
+    &-- {
+        &size- {
+            &sm {
+                width: min(100%, 2.75rem);
+            }
+
+            &md {
+                width: min(100%, 5rem);
+            }
+
+            &lg {
+                width: min(100%, 16rem);
+            }
+        }
+
+        &circle {
+            aspect-ratio: 1 / 1;
+            object-fit: cover;
+            border-radius: 100%;
+        }
+
+        &change-text-align-on-screen- {
+            @each $i in $theme-breakpoint {
+                @media (width >= get-theme-breakpoint($i)) {
+                    &#{$i}- {
+                        &sm {
+                            width: min(100%, 20rem);
+                        }
+
+                        &md {
+                            width: min(100%, 26rem);
+                        }
+
+                        &lg {
+                            width: min(100%, 32rem);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

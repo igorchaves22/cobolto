@@ -1,0 +1,10 @@
+@import "~styles/theme.scss";
+
+.logo {
+    width: max-content;
+    height: min-content;
+    display: grid;
+    grid: min-content / repeat(2, max-content);
+    column-gap: $spacing-sm;
+    align-items: center;
+}

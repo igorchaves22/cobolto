@@ -1,0 +1,25 @@
+@import "~styles/theme.scss";
+
+.service-card {
+    width: max-content;
+    height: min-content;
+    padding: $spacing-xs $spacing-md;
+    border: $border-size solid $color-brand;
+    border-radius: $border-radius-secondary;
+    display: grid;
+    grid: min-content / repeat(2, max-content);
+    column-gap: $spacing-sm;
+    align-items: center;
+    background-color: $color-brand;
+    cursor: pointer;
+    transition: all $time ease-in-out;
+
+    &:hover {
+        background-color: transparent;
+        transform: scale(1.05);
+
+        * {
+            color: $color-brand;
+        }
+    }
+}

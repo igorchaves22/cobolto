@@ -1,0 +1,35 @@
+@import "~styles/theme.scss";
+
+.group-box {
+    width: 100%;
+    height: min-content;
+    display: flex;
+    flex-wrap: wrap;
+    gap: $spacing-md $spacing-xxl;
+    place-content: center;
+    place-items: center;
+
+    &-- {
+        &size- {
+            &sm {
+                width: min(100%, 22rem);
+            }
+
+            &md {
+                width: min(100%, 32rem);
+            }
+
+            &lg {
+                width: min(100%, 42rem);
+            }
+
+            &max {
+                width: max-content;
+            }
+        }
+
+        &justify-content-left {
+            justify-content: start;
+        }
+    }
+}

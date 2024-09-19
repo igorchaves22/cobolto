@@ -1,0 +1,19 @@
+@import "~styles/theme.scss";
+
+.header-link {
+    width: max-content;
+    height: min-content;
+
+    &__ {
+        &link {
+            color: $color-primary;
+            font: $font-md;
+            text-decoration: none;
+            transition: color $time ease-in-out;
+
+            &:hover {
+                color: $color-brand;
+            }
+        }
+    }
+}

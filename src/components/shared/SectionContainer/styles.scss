@@ -1,0 +1,79 @@
+@import "~styles/theme.scss";
+@import "~styles/utils.scss";
+
+.section-container {
+    width: 100%;
+    height: min-content;
+    padding: $spacing-xxl $spacing-md;
+    scroll-margin-top: $spacing-xxl;
+    display: grid;
+    grid: min-content / min(100%, $max-content-width);
+    place-content: center;
+    background: radial-gradient(ellipse at center, rgba($color-brand, 0.25) 0%, transparent 45%),
+        linear-gradient(to bottom, $color-main 1%, transparent, $color-main 98%);
+
+    &__ {
+        &content {
+            width: 100%;
+            height: min-content;
+            display: grid;
+            grid: repeat(auto-fill, minmax(min-content, 0)) / 100%;
+            gap: $spacing-xxl;
+            place-items: center;
+
+            &-- {
+                &change-text-align-on-screen- {
+                    @each $i in $theme-breakpoint {
+                        @media (width >= get-theme-breakpoint($i)) {
+                            &#{$i}- {
+                                &main {
+                                    grid: min-content / repeat(2, 1fr);
+                                }
+
+                                &primary {
+                                    grid: repeat(2, min-content) / repeat(2, 1fr);
+                                    grid-template-areas:
+                                        "title title"
+                                        "image content";
+
+                                    :nth-child(1) {
+                                        grid-area: title;
+                                    }
+
+                                    :nth-child(2) {
+                                        grid-area: image;
+                                    }
+
+                                    :nth-child(3) {
+                                        grid-area: content;
+                                    }
+                                }
+
+                                &secondary {
+                                    grid: min-content / 1.5fr 1fr;
+                                }
+
+                                &tertiary {
+                                    grid: min-content / 1fr 1.5fr;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &-- {
+        &hero-section-layout {
+            min-height: 100vh;
+            padding-top: $spacing-mega;
+        }
+
+        &bg-image {
+            background:
+                linear-gradient(to bottom, $color-main 1%, transparent, transparent, transparent, $color-main 99%),
+                url("~assets/image/bg.jpg") center / cover no-repeat;
+        }
+    }
+}

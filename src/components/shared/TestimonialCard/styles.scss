@@ -1,0 +1,13 @@
+@import "~styles/theme.scss";
+
+.testimonial-card {
+    width: 100%;
+    height: min-content;
+    padding: $spacing-sm $spacing-xs;
+    border: $border-size solid $color-brand;
+    border-radius: $border-radius-primary;
+    display: grid;
+    grid: repeat(2, min-content) / 100%;
+    row-gap: $spacing-sm;
+    justify-items: center;
+}

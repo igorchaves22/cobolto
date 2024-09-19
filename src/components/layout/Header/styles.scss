@@ -1,0 +1,41 @@
+@import "~styles/theme.scss";
+
+.header {
+    width: 100%;
+    height: min-content;
+    padding: $spacing-md;
+    position: fixed;
+    z-index: 10;
+    inset: 0;
+    display: grid;
+    grid: min-content / min(100%, $max-content-width);
+    justify-content: center;
+    background-color: $color-dark-glass;
+    backdrop-filter: blur($blur);
+    box-shadow: $color-shadow 0 0.125rem 0.5rem 0;
+
+    &__ {
+        &content {
+            width: 100%;
+            height: min-content;
+            display: flex;
+            flex-wrap: wrap;
+            gap: $spacing-md;
+            justify-content: space-between;
+            align-items: center;
+
+            @media (width >= $breakpoint-md) {
+                display: grid;
+                grid: min-content / repeat(2, max-content);
+            }
+        }
+
+        &button {
+            width: max-content;
+            height: min-content;
+            border: none;
+            background-color: transparent;
+            cursor: pointer;
+        }
+    }
+}

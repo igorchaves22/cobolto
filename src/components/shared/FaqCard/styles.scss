@@ -1,0 +1,20 @@
+@import "~styles/theme.scss";
+
+.faq-card {
+    width: 100%;
+    height: min-content;
+    padding: $spacing-sm $spacing-md;
+    border-left: $border-size solid $color-brand;
+    border-radius: $border-radius-primary;
+    background-color: $color-main;
+    box-shadow: $color-shadow 0 0.125rem 0.5rem 0;
+
+    &__ {
+        &title {
+            color: $color-brand;
+            font: $font-md;
+            list-style: none;
+            cursor: pointer;
+        }
+    }
+}

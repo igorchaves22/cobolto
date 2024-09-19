@@ -1,0 +1,20 @@
+@import "~styles/theme.scss";
+
+.footer-link {
+    width: 100%;
+    height: min-content;
+
+    &__ {
+        &link {
+            color: $color-main;
+            font: $font-xs;
+            text-align: left;
+            text-decoration: none;
+            transition: color $time ease-in-out;
+
+            &:hover {
+                color: $color-brand;
+            }
+        }
+    }
+}

@@ -1,0 +1,22 @@
+@import "~styles/theme.scss";
+
+.list {
+    width: 100%;
+    height: min-content;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: $spacing-md $spacing-xxl;
+    place-content: center;
+    place-items: center;
+
+    &-- {
+        &column {
+            flex-direction: column;
+        }
+
+        &align-start {
+            align-items: start;
+        }
+    }
+}

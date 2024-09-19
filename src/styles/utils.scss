@@ -1,0 +1,54 @@
+$theme-color: brand, main, primary, secondary;
+$theme-breakpoint: tny, xs, sm, md, lg, xl, xxl, mega;
+$theme-font: xs, sm, md, lg, xl, xxl, mega;
+$text-align: center, left, justify;
+
+@function get-theme-color($value) {
+    @if ($value == "brand") {
+        @return $color-brand;
+    } @else if ($value == "main") {
+        @return $color-main;
+    } @else if ($value == "primary") {
+        @return $color-primary;
+    } @else if ($value == "secondary") {
+        @return $color-secondary;
+    }
+}
+
+@function get-theme-breakpoint($value) {
+    @if ($value == "tny") {
+        @return $breakpoint-tny;
+    } @else if ($value == "xs") {
+        @return $breakpoint-xs;
+    } @else if ($value == "sm") {
+        @return $breakpoint-sm;
+    } @else if ($value == "md") {
+        @return $breakpoint-md;
+    } @else if ($value == "lg") {
+        @return $breakpoint-lg;
+    } @else if ($value == "xl") {
+        @return $breakpoint-xl;
+    } @else if ($value == "xxl") {
+        @return $breakpoint-xxl;
+    } @else if ($value == "mega") {
+        @return $breakpoint-mega;
+    }
+}
+
+@function get-theme-font($value) {
+    @if ($value == "xs") {
+        @return $font-xs;
+    } @else if ($value == "sm") {
+        @return $font-sm;
+    } @else if ($value == "md") {
+        @return $font-md;
+    } @else if ($value == "lg") {
+        @return $font-lg;
+    } @else if ($value == "xl") {
+        @return $font-xl;
+    } @else if ($value == "xxl") {
+        @return $font-xxl;
+    } @else if ($value == "mega") {
+        @return $font-mega;
+    }
+}

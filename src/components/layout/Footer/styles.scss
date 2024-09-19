@@ -1,0 +1,30 @@
+@import "~styles/theme.scss";
+
+.footer {
+    width: 100%;
+    height: min-content;
+    padding: $spacing-mega $spacing-md $spacing-xxl;
+    display: grid;
+    grid: min-content / min(100%, $max-content-width);
+    justify-content: center;
+    background-color: $color-secondary;
+
+    &__ {
+        &content {
+            width: 100%;
+            height: min-content;
+            display: flex;
+            flex-wrap: wrap;
+            gap: $spacing-xl $spacing-mega;
+            justify-content: space-evenly;
+        }
+
+        &group {
+            width: min(100%, 44rem);
+            height: min-content;
+            display: flex;
+            flex-wrap: wrap;
+            gap: $spacing-sm $spacing-xs;
+        }
+    }
+}
