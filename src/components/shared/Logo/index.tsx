@@ -1,5 +1,5 @@
 import logoIcon from "~assets/icon/logo.svg";
-import { Text } from "~components/shared";
+import { Image, Text } from "~components/shared";
 import "./styles.scss";
 
 interface ILogo {
@@ -9,9 +9,10 @@ interface ILogo {
 export function Logo({ toggleTextColor }: ILogo) {
     return (
         <figure className="logo">
-            <img
+            <Image
                 src={logoIcon}
                 alt="Logo"
+                size="sm"
             />
             <Text
                 tag="figcaption"
