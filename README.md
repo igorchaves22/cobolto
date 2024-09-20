@@ -4,7 +4,7 @@ Our travel landing page is an engaging and intuitive platform that offers users 
 
 ## Layout preview
 
-![Image]()
+![Image](./public/assets/layout-preview.png)
 
 ## About
 
